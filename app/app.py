@@ -18,9 +18,9 @@ mysql.init_app(app)
 
 @app.route('/', methods=['GET'])
 def index():
-    user = {'username': 'Students Grade Project'}
+    user = {'username': 'Students Marks Project'}
     cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblGrades')
+    cursor.execute('SELECT * FROM marks')
     result = cursor.fetchall()
     return render_template('index.html', title='Home', user=user, grades=result)
 
@@ -28,7 +28,7 @@ def index():
 @app.route('/view/<grade_id>', methods=['GET'])
 def record_view(grade_id):
     cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblGrades WHERE id=%s', grade_id)
+    cursor.execute('SELECT * FROM marks WHERE id=%s', grade_id)
     result = cursor.fetchall()
     return render_template('view.html', title='View Form', grade=result[0])
 
@@ -36,7 +36,7 @@ def record_view(grade_id):
 @app.route('/edit/<grade_id>', methods=['GET'])
 def form_edit_get(grade_id):
     cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblGrades WHERE id=%s', grade_id)
+    cursor.execute('SELECT * FROM marks WHERE id=%s', grade_id)
     result = cursor.fetchall()
     return render_template('edit.html', title='Edit Form', grade=result[0])
 
@@ -47,7 +47,7 @@ def form_update_post(grade_id):
     inputData = (request.form.get('fldLName'), request.form.get('fldFName'), request.form.get('fldSSN'),
                  request.form.get('fldTest1'), request.form.get('fldTest2'), request.form.get('fldTest3'),
                  request.form.get('fldTest4'), request.form.get('fldFinal'), request.form.get('fldGrade'), grade_id)
-    sql_update_query = """UPDATE tblGrades t SET t.Last_Name = %s, t.First_Name = %s, t.SSN = %s, t.Test1 = 
+    sql_update_query = """UPDATE marks t SET t.Last_Name = %s, t.First_Name = %s, t.SSN = %s, t.Test1 = 
     %s, t.Test2 = %s, t.Test3 = %s, t.Test4 = %s, t.Final = %s, t.Grade = %s WHERE t.id = %s """
     cursor.execute(sql_update_query, inputData)
     mysql.get_db().commit()
@@ -65,7 +65,7 @@ def form_insert_post():
     inputData = (request.form.get('fldLName'), request.form.get('fldFName'), request.form.get('fldSSN'),
                  request.form.get('fldTest1'), request.form.get('fldTest2'), request.form.get('fldTest3'),
                  request.form.get('fldTest4'), request.form.get('fldFinal'), request.form.get('fldGrade'))
-    sql_insert_query = """INSERT INTO tblGrades(Last_Name,First_Name,SSN,Test1,Test2,Test3,Test4,Final,Grade) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) """
+    sql_insert_query = """INSERT INTO marks(Last_Name,First_Name,SSN,Test1,Test2,Test3,Test4,Final,Grade) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) """
     cursor.execute(sql_insert_query, inputData)
     mysql.get_db().commit()
     return redirect("/", code=302)
@@ -74,7 +74,7 @@ def form_insert_post():
 @app.route('/delete/<grade_id>', methods=['POST'])
 def form_delete_post(grade_id):
     cursor = mysql.get_db().cursor()
-    sql_delete_query = """DELETE FROM tblGrades WHERE id = %s """
+    sql_delete_query = """DELETE FROM marks WHERE id = %s """
     cursor.execute(sql_delete_query, grade_id)
     mysql.get_db().commit()
     return redirect("/", code=302)
@@ -83,7 +83,7 @@ def form_delete_post(grade_id):
 @app.route('/api/v1/grades', methods=['GET'])
 def api_browse() -> str:
     cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblGrades')
+    cursor.execute('SELECT * FROM marks')
     result = cursor.fetchall()
     json_result = json.dumps(result);
     resp = Response(json_result, status=200, mimetype='application/json')
@@ -93,7 +93,7 @@ def api_browse() -> str:
 @app.route('/api/v1/grades/<grade_id>', methods=['GET'])
 def api_retrieve(grade_id) -> str:
     cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblGrades WHERE id=%s', grade_id)
+    cursor.execute('SELECT * FROM marks WHERE id=%s', grade_id)
     result = cursor.fetchall()
     json_result = json.dumps(result);
     resp = Response(json_result, status=200, mimetype='application/json')

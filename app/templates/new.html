@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/grades/new" method="POST">
+    <div class="row">
+        <div class="col">
+            <label for="fldLName">Last Name</label>
+            <input id="fldLName" type="text" class="form-control" placeholder="Last Name" name="fldLName">
+        </div>
+        <div class="col">
+            <label for="fldFName">First Name</label>
+            <input id="fldFName" type="text" class="form-control" placeholder="First Name" name="fldFName">
+        </div>
+        <div class="col">
+            <label for="fldSSN">SSN</label>
+            <input id="fldSSN" type="text" class="form-control" placeholder="SSN" name="fldSSN">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="fldTest1">Test1</label>
+            <input id="fldTest1" type="text" class="form-control" placeholder="Test1" name="fldTest1">
+        </div>
+        <div class="col">
+            <label for="fldTest2">Test1</label>
+            <input id="fldTest2" type="text" class="form-control" placeholder="Test2" name="fldTest2">
+        </div>
+        <div class="col">
+            <label for="fldTest3">Test1</label>
+            <input id="fldTest3" type="text" class="form-control" placeholder="Test3" name="fldTest3">
+        </div>
+    </div>
+    <div class="row">
+         <div class="col">
+            <label for="fldTest4">Test4</label>
+            <input id="fldTest4" type="text" class="form-control" placeholder="Test4" name="fldTest4">
+        </div>
+        <div class="col">
+            <label for="fldFinal">Final</label>
+            <input id="fldFinal" type="text" class="form-control" placeholder="Final" name="fldFinal">
+        </div>
+        <div class="col">
+            <label for="fldGrade">Test1</label>
+            <input id="fldGrade" type="text" class="form-control" placeholder="Grade" name="fldGrade">
+        </div>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-success">Success</button>
+
+</form>
+
+{% endblock %}

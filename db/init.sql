@@ -1,7 +1,7 @@
 CREATE DATABASE db_test;
 use db_test;
 
-CREATE TABLE IF NOT EXISTS tblGrades (
+CREATE TABLE IF NOT EXISTS marks (
     `id` INT(11) AUTO_INCREMENT,
     `Last_Name` VARCHAR(9),
     `First_Name` VARCHAR(16),
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS tblGrades (
     `Grade` VARCHAR(7),
     PRIMARY KEY (`id`)
 );
-INSERT INTO tblGrades(Last_Name,First_Name,SSN,Test1,Test2,Test3,Test4,Final,Grade) VALUES
+INSERT INTO marks(Last_Name,First_Name,SSN,Test1,Test2,Test3,Test4,Final,Grade) VALUES
     ('Alfalfa','Aloysius','123-45-6789',40,90,100,83,49,'D-'),
     ('Alfred','University','123-12-1234',41,97,96,97,48,'D+'),
     ('Gerty','Gramma','567-89-0123',41,80,60,40,44,'C'),

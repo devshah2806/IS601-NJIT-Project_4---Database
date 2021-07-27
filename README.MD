@@ -19,7 +19,7 @@ Added database and operations (Add new data, edit data & delete data)
 # Deleted Data Screenshot
 ![Deleted Data](snapshots/deleted.png)
 # Word Document
-![Document](Word File/Snapshots.docx)
+![Document](https://github.com/devshah2806/database/blob/master/WordFile/Snapshots.docx)
 
 # Readings
 * [What is an HTTP API?](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)

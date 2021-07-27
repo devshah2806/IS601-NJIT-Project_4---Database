@@ -1,4 +1,4 @@
-from typing import List, Dict
+
 import simplejson as json
 from flask import Flask, request, Response, redirect
 from flask import render_template
@@ -65,7 +65,8 @@ def form_insert_post():
     inputData = (request.form.get('fldLName'), request.form.get('fldFName'), request.form.get('fldSSN'),
                  request.form.get('fldTest1'), request.form.get('fldTest2'), request.form.get('fldTest3'),
                  request.form.get('fldTest4'), request.form.get('fldFinal'), request.form.get('fldGrade'))
-    sql_insert_query = """INSERT INTO marks(Last_Name,First_Name,SSN,Test1,Test2,Test3,Test4,Final,Grade) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) """
+    sql_insert_query = """INSERT INTO marks(Last_Name,First_Name,SSN,Test1,Test2,Test3,Test4,Final,Grade) VALUES (%s, 
+    %s, %s, %s, %s, %s, %s, %s, %s) """
     cursor.execute(sql_insert_query, inputData)
     mysql.get_db().commit()
     return redirect("/", code=302)

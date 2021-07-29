@@ -31,3 +31,4 @@ INSERT INTO marks(Last_Name,First_Name,SSN,Test1,Test2,Test3,Test4,Final,Grade) 
     ('Elephant','Ima','456-71-9012',45,1,78,88,77,'B-'),
     ('George','Boy','345-67-3901',40,1,11,-1,4,'B'),
     ('Heffalump','Harvey','632-79-9439',30,1,20,30,40,'C');
+

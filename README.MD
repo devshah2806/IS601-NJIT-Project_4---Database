@@ -2,22 +2,23 @@
 This project is a homework assignment to teach how to get Pycharm setup with Docker, Flask, MySQL, and Postman.
 Added database and operations (Add new data, edit data & delete data)
 
-# PyCharmDB Screenshot
-![PyCharmDB](snapshots/pycharmdb.png)
-# Browser DB Screenshot
-![BrowserDB](snapshots/brw_db.png)
-# Single Data Screenshot
-![Single Data](snapshots/singleData.png)
-# Adding new Data Screenshot
-![Adding new data Data](snapshots/adding.png)
-# Added new Data Screenshot
-![Added new Data](snapshots/added.png)
-# Updating Data Screenshot
-![Updating Data](snapshots/updating.png)
-# Updated Data Screenshot
-![Updated Data](snapshots/updated.png)
-# Deleted Data Screenshot
-![Deleted Data](snapshots/deleted.png)
+# A)
+![PyCharmDB](snapshots/a.png)
+# B)
+![BrowserDB](snapshots/b.png)
+# C) 1
+![Single Data](snapshots/c1.png)
+# C) 2
+![Adding new data Data](snapshots/c2.png)
+# D) 1
+![Added new Data](snapshots/d1.png)
+# D) 2
+![Updating Data](snapshots/d2.png)
+# E) 1
+![Updated Data](snapshots/e1.png)
+# E) 2
+![Deleted Data](snapshots/e2.png)
+![Deleted Data](snapshots/e3.png)
 
 # Readings
 * [What is an HTTP API?](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)

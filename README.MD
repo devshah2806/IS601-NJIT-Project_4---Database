@@ -4,21 +4,21 @@ Added database and operations (Add new data, edit data & delete data)
 
 # A)Postman displaying all the records by GET request
 ![A)	Postman displaying all the records by GET request](snapshots/a.png)
-# B)
-![BrowserDB](snapshots/b.png)
-# C) 1
-![Single Data](snapshots/c1.png)
-# C) 2
-![Adding new data Data](snapshots/c2.png)
-# D) 1
-![Added new Data](snapshots/d1.png)
-# D) 2
-![Updating Data](snapshots/d2.png)
-# E) 1
-![Updated Data](snapshots/e1.png)
-# E) 2
-![Deleted Data](snapshots/e2.png)
-![Deleted Data](snapshots/e3.png)
+# B)Postman displaying single record using GET request
+![B)	Postman displaying single record using GET request](snapshots/b.png)
+# C)1. Create record by POST request
+![C)	1. Create record by POST request](snapshots/c1.png)
+# C)2. Created  new record
+![C)	2. Created  new record](snapshots/c2.png)
+# D)1. Edit record
+![D)	1. Edit record](snapshots/d1.png)
+# D)2. Record edited
+![D)	2. Record edited](snapshots/d2.png)
+# E)1. Deleting record
+![E)	1. Deleting record](snapshots/e1.png)
+# E)2. Record Deleted
+![E)	2. Record Deleted](snapshots/e2.png)
+![E)	2. Record Deleted](snapshots/e3.png)
 
 # Readings
 * [What is an HTTP API?](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)

@@ -2,6 +2,9 @@
 This project is a homework assignment to teach how to get Pycharm setup with Docker, Flask, MySQL, and Postman.
 Added database and operations (Add new data, edit data & delete data)
 
+# SnapShots Word File
+[wordfile](https://github.com/devshah2806/database/blob/Project_3/wordfile/POSTMAN.docx)
+
 # A)Postman displaying all the records by GET request
 ![A)	Postman displaying all the records by GET request](snapshots/a.png)
 # B)Postman displaying single record using GET request

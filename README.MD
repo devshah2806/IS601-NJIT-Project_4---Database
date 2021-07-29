@@ -2,8 +2,8 @@
 This project is a homework assignment to teach how to get Pycharm setup with Docker, Flask, MySQL, and Postman.
 Added database and operations (Add new data, edit data & delete data)
 
-# A)
-![PyCharmDB](snapshots/a.png)
+# A)Postman displaying all the records by GET request
+![A)	Postman displaying all the records by GET request](snapshots/a.png)
 # B)
 ![BrowserDB](snapshots/b.png)
 # C) 1
